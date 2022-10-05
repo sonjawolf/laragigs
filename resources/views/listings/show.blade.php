@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-layout>
 
     @include('partials._search')
     <a href="/" class="inline-block text-black ml-4 mb-4"
@@ -21,7 +19,7 @@
                 <div class="text-xl font-bold mb-4">{{$listing->company}}</div>
 
                 <x-listing_tags :tagsCsv="$listing->tags"/>
-                
+
                 <div class="text-lg my-4">
                     <i class="fa-solid fa-location-dot"></i> {{$listing->location}}
                 </div>
@@ -39,8 +37,7 @@
                             href="mailto:{{$listing->email}}"
                             class="block bg-laravel text-white mt-6 py-2 rounded-xl hover:opacity-80"
                         ><i class="fa-solid fa-envelope"></i>
-                            Contact Employer</a
-                        >
+                            Contact Employer</a>
 
                         <a
                             href="{{$listing->website}}"
@@ -55,4 +52,4 @@
         </x-card>
     </div>
 
-@endsection
+</x-layout>
